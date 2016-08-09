@@ -1,0 +1,52 @@
+#iosCheckbox{
+  display: none;
+}
+
+#iosCheckbox + label{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+
+#iosCheckbox + label:before,
+#iosCheckbox + label:after{
+  display: block;
+  position: absolute;
+  top:1px;
+  left: 1px;
+  bottom:1px;
+  content: '';
+}
+
+
+#iosCheckbox + label:after{
+  width: 58px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+
+}
+
+
+#iosCheckbox + label:before{
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+
+#iosCheckbox:checked + label:before{
+  background-color: #8ce196;
+}
+
+#iosCheckbox:checked + label:after{
+  margin-left:60px;
+}
